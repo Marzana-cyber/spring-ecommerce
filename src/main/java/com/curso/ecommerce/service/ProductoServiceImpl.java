@@ -1,5 +1,6 @@
 package com.curso.ecommerce.service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -33,6 +34,11 @@ public class ProductoServiceImpl implements ProductoService{
 	@Override
 	public void delete(Integer id) {
 		productoRepository.deleteById(id);
+	}
+	
+	@Override
+	public List<Producto> findAll(){
+		return productoRepository.findAll();
 	}
 
 }
